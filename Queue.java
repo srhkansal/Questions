@@ -1,11 +1,3 @@
-/**
- * Author: Mathias Bak Bertelsen
- * Email:  bufas@cs.au.dk
- * Date:   03-08-2014
- * 
- * A very simple implementation of a generic FIFO queue.
- */
-
 public class Queue<T> {
     
     private Object[] queue;       // The underlying array
