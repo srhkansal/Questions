@@ -51,7 +51,7 @@ class SparseVector {
         int product = 0;
         for (Integer key: indexToNonZeroElement.keySet()) {
             if (vec.indexToNonZeroElement.containsKey(key)) {
-                product = indexToNonZeroElement.get(key) * vec.indexToNonZeroElement.get(key);
+                product += indexToNonZeroElement.get(key) * vec.indexToNonZeroElement.get(key);
             }
         }
         return product;
