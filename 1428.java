@@ -37,25 +37,28 @@ mat[i] is sorted in a non-decreasing way.
 
 
 class Solution {
-    public int leftMostColumnWithOne(BinaryMatrix binaryMatrix) {
-        List<Integer> dimension=binaryMatrix.dimensions();
-        int row=dimension.get(0);
-        int col=dimension.get(1);
-       
-        int i=0;
-        int j=col-1
-        int result=-1;
+
+public int leftMostColumnWithOne(BinaryMatrix binaryMatrix) {
+
+        List<Integer> dimension = binaryMatrix.dimensions();
+		int row = dimension.get(0);
+		int col = dimension.get(1);
+
+		int i = 0;
+		int j = col - 1;
         
-        while(i<row && j>=0) {
-            
-            int result = binaryMatrix.get(i,j);
-            if(result==0)
-              i++;
-            else{
-                result=j;
-                j--;
-             }
-        } 
-        return result;
-    }
+		int result = -1;
+
+		while (i<row && j >= 0) {
+
+		    int val = binaryMatrix.get(i, j);
+			if (val == 0)
+				i++;
+			else {
+				result = j;
+				j--;
+			}
+		}
+		return result;
+	}
 }
